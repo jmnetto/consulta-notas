@@ -368,18 +368,22 @@
         // ----------------------------------------------------
 
         if (error) {
+    console.error(error);
 
-            console.error(error);
+    resultado.innerHTML =
+        '<div class="erro">' +
+        '<strong>Erro técnico:</strong><br><br>' +
+        'Código: ' + (error.code || 'não informado') +
+        '<br><br>' +
+        'Mensagem: ' + (error.message || 'não informada') +
+        '<br><br>' +
+        'Detalhes: ' + (error.details || 'não informado') +
+        '<br><br>' +
+        'Sugestão: ' + (error.hint || 'não informada') +
+        '</div>';
 
-            resultado.innerHTML =
-                '<div class="erro">' +
-                'Erro ao realizar a consulta.' +
-                '<br><br>' +
-                'Verifique a configuração do sistema.' +
-                '</div>';
-
-            return;
-        }
+    return;
+}
 
 
         // ----------------------------------------------------
