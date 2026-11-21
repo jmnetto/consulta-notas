@@ -402,31 +402,29 @@
 
 
         // ----------------------------------------------------
-        // OBTÉM A NOTA
-        // ----------------------------------------------------
+        
+        // OBTÉM AS NOTAS
 
-        const nota =
-            Number(data[0].nota);
-
-
-        // ----------------------------------------------------
-        // FORMATA A NOTA
-        // ----------------------------------------------------
-
-        const notaFormatada =
-            nota
-                .toFixed(2)
-                .replace(".", ",");
+        const p1 = Number(data[0].p1);
+        const p2 = Number(data[0].p2);
 
 
-        // ----------------------------------------------------
-        // MOSTRA A NOTA
-        // ----------------------------------------------------
+        // FORMATA AS NOTAS
+
+        const p1Formatada =
+            p1.toFixed(2).replace(".", ",");
+
+        const p2Formatada =
+            p2.toFixed(2).replace(".", ",");
+
+
+        // MOSTRA AS DUAS NOTAS
 
         resultado.innerHTML =
             '<div class="nota">' +
-            'Nota: ' +
-            notaFormatada +
+                '<div>Nota da P1: ' + p1Formatada + '</div>' +
+                '<div style="margin-top: 15px;">Nota da P2: ' +
+                p2Formatada + '</div>' +
             '</div>';
 
     }
